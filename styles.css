@@ -59,3 +59,12 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 .tile-link{min-width:0;overflow-wrap:anywhere}
 .table-wrap{width:100%;max-width:100%;overflow-x:auto}
 @media(max-width:600px){.tile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{min-width:0}.toolbar>*{max-width:100%}}
+
+/* Bottom More drawer interaction */
+.mobile-menu-backdrop{position:fixed;inset:58px 0 62px;background:rgba(5,24,31,.38);z-index:49}
+.mobile-menu-backdrop.hidden{display:none!important}
+@media(max-width:700px){
+ .sidebar.open{display:flex!important;z-index:51}
+ #mobileMenuBtn{cursor:pointer;touch-action:manipulation}
+ .mobile-dock{z-index:52;padding-bottom:env(safe-area-inset-bottom)}
+}
