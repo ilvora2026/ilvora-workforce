@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c2835"><meta name="description" content="ILVORA Workforce Management">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./assets/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/icon-192.png"><link rel="stylesheet" href="./styles.css">
+<title>ILVORA Workforce</title>
+</head>
+<body>
+<div id="loginScreen" class="login-screen">\n  <div class="login-card">\n    <img class="login-logo" src="./assets/ilvora-logo.jpeg" alt="ILVORA Healthcare">\n    <div class="eyebrow">ILVORA HEALTHCARE GROUP</div>\n    <h1>Workforce sign in</h1>\n    <p class="login-intro">Sign in to open your assigned workspace.</p>\n    <form id="loginForm">\n      <label class="field">Demo account<select id="demoAccount" required><option value="">Choose your account</option><option value="md">Managing Director</option><option value="head">Head Office Admin</option><option value="assistant">Assistant Head Office Admin</option><option value="branch">Branch Admin</option><option value="employee">Employee</option></select></label>\n      <label class="field">User ID<input id="loginUser" autocomplete="username" placeholder="Enter demo user ID" required></label>\n      <label class="field">Password<div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter password" required><button type="button" id="togglePassword" class="password-toggle">Show</button></div></label>\n      <button class="btn login-submit" type="submit">Sign in</button>\n      <p id="loginError" class="login-error" aria-live="polite"></p>\n    </form>\n    <p class="login-disclaimer">Demonstration accounts only. No real authentication or employee records are connected.</p>\n  </div>\n</div>\n<div id="loading" class="loading"><img src="./assets/ilvora-logo.jpeg" alt="ILVORA"><div class="loader"></div><span>Preparing your workspace…</span></div>
+<header class="topbar">
+  <button class="brand" id="homeBtn" aria-label="Home"><img src="./assets/ilvora-logo.jpeg" alt="ILVORA Healthcare"></button>
+  <div class="top-actions"><span class="environment">DEMO WORKSPACE</span><button id="terminalBtn" class="outline small">Attendance terminal</button><button id="profileBtn" class="profile" aria-label="Profile">BK</button><button id="moreBtn" class="more" aria-label="More options">⋮</button></div>
+  <div id="moreMenu" class="more-menu hidden"><button data-go="profile">My profile</button><button data-go="settings">Settings</button><button data-go="help">Help & support</button><button id="logoutBtn">Sign out</button></div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <div class="signed-in-as"><span class="live-dot"></span><span id="signedInRole">Signed in</span></div>
+  <div class="nav-caption">WORKSPACE</div>
+  <nav id="navigation">
+    <button class="nav-item active" data-tab="dashboard"><span>▦</span> Dashboard</button>
+    <button class="nav-item" data-tab="attendance"><span>◷</span> Attendance</button>
+    <button class="nav-item" data-tab="employees"><span>♙</span> Employees</button>
+    <button class="nav-item" data-tab="branches"><span>⌖</span> Branches</button>
+    <button class="nav-item" data-tab="rosters"><span>▤</span> Duty rosters</button>
+    <button class="nav-item" data-tab="leaves"><span>▧</span> Leave requests</button>
+    <button class="nav-item" data-tab="payroll"><span>₹</span> Payroll & payslips</button>
+    <button class="nav-item" data-tab="transfers"><span>⇄</span> Transfers</button>
+    <button class="nav-item" data-tab="reports"><span>▥</span> Reports & registers</button>
+    <button class="nav-item" data-tab="approvals"><span>✓</span> Approval centre <i class="count">4</i></button>
+    <button class="nav-item" data-tab="admins"><span>♧</span> Admin access</button>
+    <button class="nav-item" data-tab="terminal"><span>▣</span> Attendance terminal</button>
+    <button class="nav-item" data-tab="settings"><span>⚙</span> Settings & audit</button>
+  </nav>
+  <div class="sidebar-foot"><span class="live-dot"></span> ILVORA Workforce <small>Build preview 0.1</small></div>
+</aside>
+<main class="main" id="main">
+  <div class="video-banner"><video autoplay muted loop playsinline poster="/assets/ilvora-logo.jpeg"><source src="./assets/ilvora-background.mp4" type="video/mp4"></video><div class="video-shade"></div><div class="banner-copy"><span>ILVORA HEALTHCARE GROUP</span><h1>Where care becomes confidence.</h1><p>People. Presence. Performance.</p></div></div>
+  <div class="page-head"><div><div class="eyebrow" id="crumb">WORKSPACE / OVERVIEW</div><h2 id="pageTitle">Dashboard</h2><p id="pageSub">A clear view of your workforce and daily operations.</p></div><div class="head-date" id="todayDate"></div></div>
+  <section id="content" aria-live="polite"></section>
+  <footer>© ILVORA Healthcare Group · Confidential workforce information · <span>Demo interface — not connected to live records</span></footer>
+</main>
+</div>
+<div class="mobile-dock"><button data-tab="dashboard">⌂<small>Home</small></button><button data-tab="attendance">◷<small>Attendance</small></button><button data-tab="leaves">▧<small>Leaves</small></button><button id="mobileMenuBtn">⋮<small>More</small></button></div>
+<div id="toast" class="toast" role="status"></div>
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle">Details</h3><button id="modalClose" aria-label="Close">×</button></div><div id="modalBody"></div></div></div>
+<script src="./app.js"></script>
+</body></html>
