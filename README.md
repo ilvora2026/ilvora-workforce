@@ -96,3 +96,11 @@ This is still a static GitHub Pages trial using sample data and demo credentials
 - The interactive calendar is restricted in the interface to Branch Admin; Head Office roster page remains a read-only overview.
 
 This remains a static demonstration. Do not use it for real authentication, password recovery, roster publication or payroll until server-side authentication, authorisation, persistence, audit logging and OTP delivery are implemented and tested.
+
+
+## Optional biometric attendance module (v0.8 demo)
+- Existing mobile QR + GPS + front-camera attendance and common attendance device workflows are retained.
+- Adds an optional Biometric Devices workspace for MD/Head Office registration and employee-to-device ID mapping.
+- Branch Admin can view only devices assigned to their branch.
+- The interface is a frontend demonstration. No physical fingerprint terminal is connected; vendor SDK/API connector, secure gateway, backend authentication, event ingestion, offline queue and D1 persistence must be implemented and tested after a specific model/firmware is selected.
+- Do not upload raw fingerprint images/templates to the cloud. Enrol on-device where supported and transmit signed attendance events plus device user ID and method.

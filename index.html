@@ -11,7 +11,7 @@
 <div id="loginScreen" class="login-screen">
   <div class="login-card">
     <img class="login-logo" src="./assets/ilvora-logo.jpeg" alt="ILVORA Healthcare">
-    <div class="eyebrow">ILVORA HEALTHCARE GROUP</div>
+    <div class="eyebrow">ILVORA HEALTHCARE</div>
     <h1>Workforce sign in</h1>
     <p class="login-intro">Sign in to open your assigned workspace.</p>
     <form id="loginForm">
@@ -22,6 +22,15 @@
       <p id="loginError" class="login-error" aria-live="polite"></p>
     </form>
     <div class="login-recovery"><button type="button" id="forgotPasswordBtn" class="text-link">Forgot password?</button></div>
+    <section id="passwordRecoveryPanel" class="recovery-panel hidden" aria-live="polite">
+      <div class="recovery-heading"><strong>Reset your password</strong><button type="button" id="closeRecoveryBtn" class="text-link">Back to sign in</button></div>
+      <p>Enter your employee ID and the mobile number or email address registered with ILVORA.</p>
+      <label class="field">Employee ID / User ID<input id="recoveryUserId" autocomplete="username" placeholder="Enter your employee ID"></label>
+      <label class="field">Registered phone number or email<input id="recoveryContact" type="text" autocomplete="email" placeholder="Enter registered phone or email"></label>
+      <button type="button" id="recoverySubmitBtn" class="btn login-submit">Continue</button>
+      <p id="recoveryMessage" class="recovery-message" role="status"></p>
+      <p class="hint">Demo preview: this confirms the request interface only. Real OTP or reset-link delivery requires secure server authentication and an SMS/email provider.</p>
+    </section>
     <p class="login-disclaimer">Demonstration accounts only. No real authentication or employee records are connected.</p>
   </div>
 </div>
@@ -46,6 +55,7 @@
     <button class="nav-item" data-tab="resignation"><span>↗</span> Resignation</button>
     <button class="nav-item active" data-tab="dashboard"><span>▦</span> Dashboard</button>
     <button class="nav-item" data-tab="attendance"><span>◷</span> Attendance</button>
+    <button class="nav-item" data-tab="biometric"><span>▣</span> Biometric devices</button>
     <button class="nav-item" data-tab="employees"><span>♙</span> Employees</button>
     <button class="nav-item" data-tab="branches"><span>⌖</span> Branches</button>
     <button class="nav-item" data-tab="rosters"><span>▤</span> Duty rosters</button>
@@ -69,10 +79,10 @@
   <div class="sidebar-foot"><span class="live-dot"></span> ILVORA Workforce <small>Build preview 0.1</small></div>
 </aside>
 <main class="main" id="main">
-  <div class="video-banner"><video autoplay muted loop playsinline poster="/assets/ilvora-logo.jpeg"><source src="./assets/ilvora-background.mp4" type="video/mp4"></video><div class="video-shade"></div><div class="banner-copy"><span>ILVORA HEALTHCARE GROUP</span><h1>Where care becomes confidence.</h1><p>People. Presence. Performance.</p></div></div>
+  <div class="video-banner"><video autoplay muted loop playsinline poster="/assets/ilvora-logo.jpeg"><source src="./assets/ilvora-background.mp4" type="video/mp4"></video><div class="video-shade"></div><div class="banner-copy"><span>ILVORA HEALTHCARE</span><h1>Where care becomes confidence.</h1><p>People. Presence. Performance.</p></div></div>
   <div class="page-head"><div><div class="eyebrow" id="crumb">WORKSPACE / OVERVIEW</div><h2 id="pageTitle">Dashboard</h2><p id="pageSub">A clear view of your workforce and daily operations.</p></div><div class="head-date" id="todayDate"></div></div>
   <section id="content" aria-live="polite"></section>
-  <footer>© ILVORA Healthcare Group · Confidential workforce information · <span>Demo interface — not connected to live records</span></footer>
+  <footer>© ILVORA Healthcare · Confidential workforce information · <span>Demo interface — not connected to live records</span></footer>
 </main>
 </div>
 <div id="mobileMenuBackdrop" class="mobile-menu-backdrop hidden"></div><div class="mobile-dock"><button data-tab="dashboard">⌂<small>Home</small></button><button data-tab="attendance">◷<small>Attendance</small></button><button data-tab="leaves">▧<small>Leaves</small></button><button id="mobileMenuBtn" aria-label="Open admin navigation" aria-expanded="false">⋮<small>More</small></button></div>

@@ -95,3 +95,14 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 .signature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:15px 0}.signature-card{min-width:0;border:1px solid var(--line);border-radius:12px;padding:14px;background:#fbfdfd}.signature-card-head{display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:9px}.signature-card-head b{display:block;font-size:13px}.signature-card-head small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.signature-number{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--teal2);color:var(--teal);font-weight:800}.signature-preview{min-height:54px;border:1px dashed #c9d8d7;border-radius:8px;display:grid;place-items:center;color:#829397;font-size:10px;background:white}.signature-document-preview{margin:14px 0;padding:14px;border:1px solid var(--line);border-radius:10px;background:#fff}.signature-document-preview>b{font-size:12px}.signature-preview-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px;text-align:center}.signature-preview-row strong{font-size:10px}.signature-line{height:30px;border-bottom:1px solid #52676c;margin-bottom:7px}
 .signature-preview img{max-width:100%;max-height:70px;object-fit:contain}.signature-print-row{display:flex;justify-content:space-around;align-items:flex-end;gap:24px;padding:22px 10px}.signature-print-row.single{justify-content:center}.signature-print-item{flex:1;min-width:0;text-align:center}.signature-print-item img{display:block;max-width:180px;width:100%;height:66px;object-fit:contain;margin:0 auto 8px}.signature-print-item strong,.signature-print-item span{display:block}.signature-print-item strong{font-size:13px}.signature-print-item span{font-size:11px;color:var(--muted);margin-top:3px}
 @media(max-width:600px){.signature-grid{grid-template-columns:1fr}.signature-print-row{gap:10px;padding:16px 2px}.signature-print-item img{max-width:130px;height:56px}.signature-print-item strong{font-size:11px}.signature-print-item span{font-size:10px}}
+
+/* v0.7.3: robust inline password recovery panel */
+.recovery-panel{margin:16px 0 8px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#f8fbfb;text-align:left}
+.recovery-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--ink);font-size:15px}
+.recovery-heading .text-link{font-size:11px;white-space:nowrap}
+.recovery-panel>p{font-size:12px;color:var(--muted);line-height:1.5}
+.recovery-panel .login-submit{width:100%;margin-top:8px}
+.recovery-message{font-size:12px;line-height:1.5;padding:9px;border-radius:8px}
+.recovery-message:empty{display:none}
+.recovery-message.error{background:#fff0ef;color:#9d3d3d}
+.recovery-message.success{background:#eaf5f0;color:#23634d}
