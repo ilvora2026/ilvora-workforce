@@ -68,3 +68,23 @@ body{padding-bottom:env(safe-area-inset-bottom)}
  #mobileMenuBtn{cursor:pointer;touch-action:manipulation}
  .mobile-dock{z-index:52;padding-bottom:env(safe-area-inset-bottom)}
 }
+/* ILVORA demo additions: profile sign-out, password recovery and monthly roster calendar */
+.profile-menu{position:absolute;right:16px;top:58px;z-index:90;min-width:170px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:7px;box-shadow:var(--shadow)}
+.profile-menu button{display:block;width:100%;padding:11px 12px;border:0;border-radius:8px;background:#fff;text-align:left;color:var(--ink);font-size:12px}
+.profile-menu button:hover{background:#eef5f4}.profile-menu .logout-option{color:#a33d39;font-weight:700}
+.text-link{border:0;background:transparent;color:#14766e;text-decoration:underline;font-size:12px;padding:8px 0;cursor:pointer}
+.compact-field{min-width:190px;margin:0}.calendar-weekdays,.roster-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.calendar-weekdays{margin:14px 0 6px}.calendar-weekdays span{text-align:center;font-size:10px;font-weight:700;color:#6e8388;padding:7px 0}
+.calendar-day{min-height:68px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);padding:8px 5px;text-align:left;display:flex;flex-direction:column;gap:8px;cursor:pointer}
+.calendar-day b{font-size:13px}.calendar-day small{font-size:9px;color:#6a8084;overflow-wrap:anywhere}.calendar-day:hover{border-color:var(--teal);background:#f0f8f6}.calendar-day.has-shift{background:#edf7f3;border-color:#b8d9ce}.calendar-blank{min-height:68px}
+@media(max-width:700px){.profile-menu{top:52px;right:10px}.calendar-weekdays,.roster-calendar{gap:3px}.calendar-day{min-height:58px;padding:5px 3px}.calendar-day small{font-size:8px}.compact-field{min-width:100%;width:100%}}
+/* ILVORA demo additions: profile sign-out, password recovery and monthly roster calendar */
+.profile-menu{position:absolute;right:16px;top:58px;z-index:90;min-width:170px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:7px;box-shadow:var(--shadow)}
+.profile-menu button{display:block;width:100%;padding:11px 12px;border:0;border-radius:8px;background:#fff;text-align:left;color:var(--ink);font-size:12px}
+.profile-menu button:hover{background:#eef5f4}.profile-menu .logout-option{color:#a33d39;font-weight:700}
+.text-link{border:0;background:transparent;color:#14766e;text-decoration:underline;font-size:12px;padding:8px 0;cursor:pointer}
+.compact-field{min-width:190px;margin:0}.calendar-weekdays,.roster-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.calendar-weekdays{margin:14px 0 6px}.calendar-weekdays span{text-align:center;font-size:10px;font-weight:700;color:#6e8388;padding:7px 0}
+.calendar-day{min-height:68px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);padding:8px 5px;text-align:left;display:flex;flex-direction:column;gap:8px;cursor:pointer}
+.calendar-day b{font-size:13px}.calendar-day small{font-size:9px;color:#6a8084;overflow-wrap:anywhere}.calendar-day:hover{border-color:var(--teal);background:#f0f8f6}.calendar-day.has-shift{background:#edf7f3;border-color:#b8d9ce}.calendar-blank{min-height:68px}
+@media(max-width:700px){.profile-menu{top:52px;right:10px}.calendar-weekdays,.roster-calendar{gap:3px}.calendar-day{min-height:58px;padding:5px 3px}.calendar-day small{font-size:8px}.compact-field{min-width:100%;width:100%}}

@@ -88,3 +88,11 @@ Security note: GitHub Pages is static hosting. The credentials in this demo are 
 - Branch report download requirements and notification before the 18th are specified.
 ## Critical limitation
 This is still a static GitHub Pages trial using sample data and demo credentials. Client-side role filtering is for demonstration only and is not a security boundary. Production must enforce tenant/branch scope and user permissions in the API/database, authenticate each request, and audit every action. Demo buttons may show local confirmation but do not create persistent approvals, payroll entries, SMS, OTP, secure camera evidence or report jobs.
+
+## v0.7 demo update (5 Nov 2026)
+- Added a profile menu with My Profile and Sign out.
+- Added Forgot password entry on the sign-in screen. The demo illustrates registered phone/email recovery, but does not send OTP/SMS/email; production needs a secure authentication backend and verified contact delivery.
+- Added a month calendar for Branch Admin duty assignment. Select an employee, choose a date, and set shift type/start/end times in one-hour increments. Supports overnight time ranges and paid-off days. Assignments are in-memory demo data only and are not persisted.
+- The interactive calendar is restricted in the interface to Branch Admin; Head Office roster page remains a read-only overview.
+
+This remains a static demonstration. Do not use it for real authentication, password recovery, roster publication or payroll until server-side authentication, authorisation, persistence, audit logging and OTP delivery are implemented and tested.
